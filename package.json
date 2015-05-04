@@ -1,0 +1,26 @@
+{
+  "name": "nodejs-recursive-readdir",
+  "version": "1.0.0",
+  "description": "An API for recursively listing the files in a directory in parallel.",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/upennyayang/nodejs-recursive-readdir.git"
+  },
+  "keywords": [
+    "NodeJS"
+  ],
+  "author": "Yayang Tian",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/upennyayang/nodejs-recursive-readdir/issues"
+  },
+  "homepage": "https://github.com/upennyayang/nodejs-recursive-readdir#readme",
+  "dependencies": {
+    "lodash": "^3.8.0",
+    "songbird": "^1.0.1"
+  }
+}
