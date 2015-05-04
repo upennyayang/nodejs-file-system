@@ -1,6 +1,20 @@
 let http = require('http')
 let fs = require('fs')
 
+require('songbird')
+async function ls(dirPath) {
+    let files = await fs.promise.readdir(dirPath)
+
+    let directFiles = []
+    for(let name of files) {
+        let stat = await fs.promise.stat(name)
+        if (!stat.isDirectory(name)) {
+            directFiles.push(name)
+        }
+    }
+    return JSON.stringify(directFiles)
+}
+
 http.createServer((req, res) => {
 
     async() => {
@@ -14,9 +28,4 @@ http.createServer((req, res) => {
 
 console.log('Server running at http://127.0.0.1:8000/')
 
-require('songbird')
-async function ls(dirPath) {
-    let files = await fs.promise.readdir(dirPath)
 
-    return JSON.stringify(files)
-}
